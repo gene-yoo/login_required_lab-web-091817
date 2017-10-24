@@ -1,0 +1,8 @@
+<% if @user.nil? %>
+  <p>Please login using the link below.</p>
+  <%= link_to "Login", login_path %>
+<% else %>
+  <p>Welcome, <%= @user %></p>
+  <p><%= link_to "Secrets", secret_path %></p>
+  <p><%= link_to "Logout", logout_path %></p>
+<% end %>
